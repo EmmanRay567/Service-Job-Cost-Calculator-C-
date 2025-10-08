@@ -1,0 +1,42 @@
+// Date: 2025-10-08
+// Course: 3014CE
+// Description: 
+// This program calculates the total cost for a service job based on user inputs.
+// It prompts the user for their name, the hours of labor, and the cost of parts.
+// The program then computes the labor total (using a fixed rate), sales tax, and the overall total cost.
+// Finally, it displays a summary including the user's name, labor cost, parts cost, sales tax, and total cost.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string name;
+    double SalesTax;
+    int Total;
+    int Parts;
+    double LaborHours;
+    double LaborTotal;
+    double CostofParts;
+    double TotalCost;
+    int LaborRate = 35;
+    //LaborTotal = Labor*35;
+    cout << "Enter Your Name: " << endl;
+    cin >> name;
+    cout << "Please Enter Hours of Labor: " << endl;
+    cin >> LaborHours;
+    cout << "Please Enter the Cost of Parts" << endl;
+    cin >> CostofParts;
+    LaborTotal = LaborHours * LaborRate;
+    SalesTax = CostofParts * 0.05;
+    TotalCost = LaborTotal + SalesTax + CostofParts;
+
+    cout << "\nNAME: " << name;
+    cout << "\nLabor $ " << LaborTotal;
+    cout << "\nParts: $" << CostofParts;
+    cout << "\nSales tax: " << SalesTax;
+    cout << "\nTotal Cost " << TotalCost;
+
+    return 0;
+}
